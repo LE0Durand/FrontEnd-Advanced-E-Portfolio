@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <script src="https://kit.fontawesome.com/722e33a4e7.js" crossorigin="anonymous"></script>
     <title>Léo Durand</title>
 </head>
+
 <body>
 
     <section id="landing-page">
@@ -16,10 +18,15 @@
                 <img id="personal-logo" src="./assets/logo.png" alt="">
             </figure>
             <ul class="nav__link--list">
-                <li class="nav__link"><a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">About</a></li>
-                <li class="nav__link"><a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a></li>
-                <li class="nav__link"><a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">Contact</a></li>
-                <li class="nav__link"><a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black"><i class="fa-solid fa-circle-half-stroke"></i></a></li>
+                <li class="nav__link"><a href="#"
+                        class="nav__link--anchor link__hover-effect link__hover-effect--black">About</a></li>
+                <li class="nav__link"><a href="#projects"
+                        class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a></li>
+                <li class="nav__link"><a href="#"
+                        class="nav__link--anchor link__hover-effect link__hover-effect--black">Contact</a></li>
+                <li class="nav__link"><a href="#"
+                        class="nav__link--anchor link__hover-effect link__hover-effect--black"><i
+                            class="fa-solid fa-circle-half-stroke"></i></a></li>
             </ul>
         </nav>
 
@@ -27,18 +34,73 @@
             <div class="header__content">
                 <h1 class="title">Salut</h1>
                 <h1 class="title green">Je suis Léo.</h1>
-                <p class="header__para">Je suis un <b class="green">développeur frontend</b> et j'aime construire des sites web qui sont faciles d'utilisation et performants pour plaire au plus grand nombre de personnes possible
-                <br>
-                Here's a bit more <b class="green">about me</b>
+                <p class="header__para">Je suis un <b class="green">développeur frontend</b> et j'aime construire des
+                    sites web qui sont faciles d'utilisation et performants pour plaire au plus grand nombre de
+                    personnes possible
+                    <br>
+                    En voici un peu plus sur <b class="green">moi</b>
                 </p>
                 <div class="social__list">
-                    <a href="https://github.com/LE0Durand" class="social__link click" target="blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="./assets/DURAND_Léo-CV_FR_2022V2.pdf" class="social__link click" target="blank"><i class="fa-solid fa-file-pdf"></i></a>
+                    <a href="https://github.com/LE0Durand" class="social__link click" target="blank"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="./assets/DURAND_Léo-CV_FR_2022V2.pdf" class="social__link click" target="blank"><i
+                            class="fa-solid fa-file-pdf"></i></a>
                 </div>
             </div>
         </header>
         <button class="mail__btn click"><i class="fa-solid fa-envelope"></i></button>
-        <a href="#projects" class="scroll"><div class="scroll__icon click"></div></a>
+        <a href="#projects" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">
+                    Voici quelques-uns de mes <span class="green">projets</span>
+                </h1>
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/bestlibrary.png" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">Best Library</h3>
+                                <h4 class="project__description--sub-title">
+                                    Html, CSS, JavaScript
+                                </h4>
+                                <p class="project__description--para">Site Web de vente de livre en ligne, facile
+                                    d'utilisation avec un design simple et épuré. </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/LE0Durand/FrontEnd-BestLibrary" class="project__description--link" target="blank"><i
+                                            class="fa-brands fa-github"></i></a>
+                                    <a href="https://le0durand.github.io/FrontEnd-BestLibrary/" class="project__description--link" target="blank"><i class="fa-solid fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/eportfolio.png" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">Premier e-portfolio</h3>
+                                <h4 class="project__description--sub-title">
+                                    Html, CSS
+                                </h4>
+                                <p class="project__description--para">Première version de mon portfolio sous la forme d'un site web </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/LE0Durand/FrontEnd-PersonalWebsite" class="project__description--link" target="blank"><i
+                                            class="fa-brands fa-github"></i></a>
+                                    <a href="https://le0durand.github.io/FrontEnd-PersonalWebsite/" class="project__description--link" target="blank"><i class="fa-solid fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </section>
 </body>
+
 </html>
