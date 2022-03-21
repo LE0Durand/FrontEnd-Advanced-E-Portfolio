@@ -52,6 +52,64 @@
         <a href="#projects" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title">En voici plus sur moi.</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Développeur Frontend.</h4>
+                <p class="modal__para">
+                    Je suis un<b class="green"> développeur frontend</b> de 20 ans et j'aime construire des
+                    sites web qui sont <b class="green">faciles d'utilisation</b>  et<b class="green"> performants.</b>
+                    <br>
+                    Je suis en apprentissage de développement Frontend, j'aimerais poursuivre cette formation avec un emploi dans la <b class="green">programmation Frontend</b> afin de me perfectionner dans ce domaine.
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
+                        <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
+                        <span class="language__name">Javascript</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="">
+                        <span class="language__name">React</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="">
+                        <span class="language__name">C++</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <h3 class="modal__title modal__title--contact">Contactez-moi !</h3>
+                <h4 class="modal__sub-title modal__sub-title--contact">Je suis ouvert à toute proposition.</h4>
+                <form id="contact__form" action="">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" name="user_name" type="text" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input class="input" name="user_email" type="email" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea class="input" name="message" type="text" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">Envoyer</button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading"><i class="fa-solid fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">Merci pour votre message ! Je vous recontacte dans les plus brefs délais
+                </div>
+            </div>
+            <i class="fa-solid fa-xmark modal__exit click"></i>
+        </div>
     </section>
     <section id="projects">
         <div class="container">
@@ -72,9 +130,12 @@
                                 <p class="project__description--para">Site Web de vente de livre en ligne, facile
                                     d'utilisation avec un design simple et épuré. </p>
                                 <div class="project__description--links">
-                                    <a href="https://github.com/LE0Durand/FrontEnd-BestLibrary" class="project__description--link" target="blank"><i
+                                    <a href="https://github.com/LE0Durand/FrontEnd-BestLibrary"
+                                        class="project__description--link" target="blank"><i
                                             class="fa-brands fa-github"></i></a>
-                                    <a href="https://le0durand.github.io/FrontEnd-BestLibrary/" class="project__description--link" target="blank"><i class="fa-solid fa-link"></i></a>
+                                    <a href="https://le0durand.github.io/FrontEnd-BestLibrary/"
+                                        class="project__description--link" target="blank"><i
+                                            class="fa-solid fa-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -88,11 +149,15 @@
                                 <h4 class="project__description--sub-title">
                                     Html, CSS
                                 </h4>
-                                <p class="project__description--para">Première version de mon portfolio sous la forme d'un site web </p>
+                                <p class="project__description--para">Première version de mon portfolio sous la forme
+                                    d'un site web </p>
                                 <div class="project__description--links">
-                                    <a href="https://github.com/LE0Durand/FrontEnd-PersonalWebsite" class="project__description--link" target="blank"><i
+                                    <a href="https://github.com/LE0Durand/FrontEnd-PersonalWebsite"
+                                        class="project__description--link" target="blank"><i
                                             class="fa-brands fa-github"></i></a>
-                                    <a href="https://le0durand.github.io/FrontEnd-PersonalWebsite/" class="project__description--link" target="blank"><i class="fa-solid fa-link"></i></a>
+                                    <a href="https://le0durand.github.io/FrontEnd-PersonalWebsite/"
+                                        class="project__description--link" target="blank"><i
+                                            class="fa-solid fa-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -101,6 +166,21 @@
             </div>
         </div>
     </section>
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+                <figure>
+                    <img class="footer__logo--img" src="./assets/logo.png" alt="">
+                </figure>
+                <div class="footer__social--list">
+                    <a href="" class="footer__social--link link__hover-effect link__hover-effect--white">Github</a>
+                    <a href="" class="footer__social--link link__hover-effect link__hover-effect--white">Contact</a>
+                    <a href="" class="footer__social--link link__hover-effect link__hover-effect--white">Resume</a>
+                </div>
+                <div class="footer__copyright">Copyright &copy; 2022 Made by Léo Durand</div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
