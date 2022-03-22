@@ -7,11 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/722e33a4e7.js" crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
     <title>Léo Durand</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("XPF-vqRbYXh0P65_p");
+        })();
+    </script>
 </head>
 
 <body>
-
     <section id="landing-page">
         <nav>
             <figure>
@@ -48,7 +54,7 @@
                 </div>
             </div>
         </header>
-        <button class="mail__btn click"><i class="fa-solid fa-envelope"></i></button>
+        <button class="mail__btn click" onclick="toggleModal()"><i class="fa-solid fa-envelope"></i></button>
         <a href="#projects" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
@@ -58,57 +64,65 @@
                 <h4 class="modal__sub-title modal__sub-title--about">Développeur Frontend.</h4>
                 <p class="modal__para">
                     Je suis un<b class="green"> développeur frontend</b> de 20 ans et j'aime construire des
-                    sites web qui sont <b class="green">faciles d'utilisation</b>  et<b class="green"> performants.</b>
+                    sites web qui sont <b class="green">faciles d'utilisation</b> et<b class="green"> performants.</b>
                     <br>
-                    Je suis en apprentissage de développement Frontend, j'aimerais poursuivre cette formation avec un emploi dans la <b class="green">programmation Frontend</b> afin de me perfectionner dans ce domaine.
+                    Je suis en apprentissage de développement Frontend, j'aimerais poursuivre cette formation avec un
+                    emploi dans la <b class="green">programmation Frontend</b> afin de me perfectionner dans ce domaine.
                 </p>
                 <div class="modal__languages">
                     <figure class="modal__language">
-                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="">
+                        <img class="modal__language--img"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                            alt="">
                         <span class="language__name">HTML</span>
                     </figure>
                     <figure class="modal__language">
-                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
+                        <img class="modal__language--img"
+                            src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
                         <span class="language__name">CSS</span>
                     </figure>
                     <figure class="modal__language">
-                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
+                        <img class="modal__language--img"
+                            src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
                         <span class="language__name">Javascript</span>
                     </figure>
                     <figure class="modal__language">
-                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="">
+                        <img class="modal__language--img"
+                            src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="">
                         <span class="language__name">React</span>
                     </figure>
                     <figure class="modal__language">
-                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="">
+                        <img class="modal__language--img"
+                            src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="">
                         <span class="language__name">C++</span>
                     </figure>
                 </div>
             </div>
             <div class="modal__half modal__contact">
+                <i class="fa-solid fa-xmark modal__exit click"></i>
                 <h3 class="modal__title modal__title--contact">Contactez-moi !</h3>
                 <h4 class="modal__sub-title modal__sub-title--contact">Je suis ouvert à toute proposition.</h4>
-                <form id="contact__form" action="">
+                <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
                         <label class="form__item--label">Name</label>
-                        <input class="input" name="user_name" type="text" required></input>
+                        <input class="input" name="user_name" type="text"></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Email</label>
-                        <input class="input" name="user_email" type="email" required></input>
+                        <input class="input" name="user_email" type="email"></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Message</label>
-                        <textarea class="input" name="message" type="text" required></textarea>
+                        <textarea class="input" name="message" type="text"></textarea>
                     </div>
                     <button id="contact__submit" class="form__submit">Envoyer</button>
                 </form>
                 <div class="modal__overlay modal__overlay--loading"><i class="fa-solid fa-spinner"></i>
                 </div>
-                <div class="modal__overlay modal__overlay--success">Merci pour votre message ! Je vous recontacte dans les plus brefs délais
+                <div class="modal__overlay modal__overlay--success">Merci pour votre message ! Je vous recontacte dans
+                    les plus brefs délais
                 </div>
             </div>
-            <i class="fa-solid fa-xmark modal__exit click"></i>
         </div>
     </section>
     <section id="projects">

@@ -64,6 +64,7 @@ label{
     font-weight: bold;
 }
 
+
 .container{
     padding: 50px 0;
     width: 100%;
@@ -272,10 +273,18 @@ PROJECTS
     width: 90%;
     max-width: 1100px;
     height: 700px;
-    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
     border-radius: 20px;
     overflow: hidden;
     display: flex;
+    visibility: hidden;
+    z-index: -1;
+    transition: visibility 1s , z-index 1s , box-shadow 0.5s ease;
+}
+
+.modal--open .modal{
+    z-index: 60;
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+    visibility: visible;
 }
 
 .modal__half{
@@ -285,10 +294,17 @@ PROJECTS
     flex-direction: column;
     justify-content: center;
     position: relative;
+    transition: all 300ms ease-in;
+}
+
+.modal--open .modal__about,
+.modal--open .modal__contact{
+    transform: translateX(0%);
 }
 
 .modal__about{
     background-color: rgb(245, 245, 245);
+    transform: translateX(-110%);
 }
 
 .modal__languages{
@@ -323,6 +339,7 @@ PROJECTS
 .modal__contact{
     background-color: #242424;
     color: white;
+    transform: translateX(110%);
 }
 
 .modal__title{
@@ -378,15 +395,15 @@ PROJECTS
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
+    z-index: -1;
 }
 
 .modal__overlay--loading{
     background-color: #242424;
     font-size: 80px;
-    z-index: -1;
 }
 
 .modal__overlay--success{
@@ -395,6 +412,11 @@ PROJECTS
     font-weight: bold;
     text-align: center;
     padding: 28px;
+}
+
+.modal__overlay--visible{
+    z-index: 1;
+    display: flex;
 }
 
 .fa-spinner{
