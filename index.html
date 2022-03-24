@@ -63,8 +63,7 @@
                 <h3 class="modal__title">En voici plus sur moi.</h3>
                 <h4 class="modal__sub-title modal__sub-title--about">Développeur Frontend.</h4>
                 <p class="modal__para">
-                    Je suis un<b class="green"> développeur frontend</b> de 20 ans et j'aime construire des
-                    sites web qui sont <b class="green">faciles d'utilisation</b> et<b class="green"> performants.</b>
+                    Je suis un<b class="green"> développeur frontend</b> de 20 ans.
                     <br>
                     Je suis en apprentissage de développement Frontend, j'aimerais poursuivre cette formation avec un
                     emploi dans la <b class="green">programmation Frontend</b> afin de me perfectionner dans ce domaine.
@@ -105,15 +104,15 @@
                 <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
                         <label class="form__item--label">Name</label>
-                        <input class="input" name="user_name" type="text"></input>
+                        <input class="input" name="user_name" type="text" required></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Email</label>
-                        <input class="input" name="user_email" type="email"></input>
+                        <input class="input" name="user_email" type="email" required></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Message</label>
-                        <textarea class="input" name="message" type="text"></textarea>
+                        <textarea class="input" name="message" type="text" required></textarea>
                     </div>
                     <button id="contact__submit" class="form__submit">Envoyer</button>
                 </form>
