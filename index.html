@@ -18,19 +18,19 @@
 </head>
 
 <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
         <nav>
             <figure>
                 <img id="personal-logo" src="./assets/logo.png" alt="">
             </figure>
             <ul class="nav__link--list">
-                <li class="nav__link"><a href="#"
+                <li class="nav__link" onclick="toggleModal()"><a href="#"
                         class="nav__link--anchor link__hover-effect link__hover-effect--black">About</a></li>
                 <li class="nav__link"><a href="#projects"
                         class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a></li>
-                <li class="nav__link"><a href="#"
+                <li class="nav__link" onclick="toggleModal()"><a href="#"
                         class="nav__link--anchor link__hover-effect link__hover-effect--black">Contact</a></li>
-                <li class="nav__link"><a href="#"
+                <li class="nav__link" onclick="toggleContrast()"><a href="#"
                         class="nav__link--anchor link__hover-effect link__hover-effect--black"><i
                             class="fa-solid fa-circle-half-stroke"></i></a></li>
             </ul>
@@ -38,47 +38,49 @@
 
         <header class="header">
             <div class="header__content">
-                <h1 class="title">Salut</h1>
-                <h1 class="title green">Je suis Léo.</h1>
-                <p class="header__para">Je suis un <b class="green">développeur frontend</b> et j'aime construire des
-                    sites web qui sont faciles d'utilisation et performants pour plaire au plus grand nombre de
-                    personnes possible
+                <h1 class="title">Hello I'm</h1>
+                <h1 class="sub-title green">Léo</h1>
+                <p class="header__para">I'm a <b class="green">Frontend Developer</b> with a strong passion for building
+                    website with great user experiences
                     <br>
-                    En voici un peu plus sur <b class="green">moi</b>
+                    Here's a bit more <b class="green click" onclick="toggleModal()">about me</b>
                 </p>
                 <div class="social__list">
-                    <a href="https://github.com/LE0Durand" class="social__link click" target="blank"><i
+                    <a href="https://github.com/LE0Durand" class="social__link click" target="_blank"><i
                             class="fa-brands fa-github"></i></a>
-                    <a href="./assets/DURAND_Léo-CV_FR_2022V2.pdf" class="social__link click" target="blank"><i
+                    <a href="./assets/DURAND_Léo-CV_FR_2022V2.pdf" class="social__link click" target="_blank"><i
                             class="fa-solid fa-file-pdf"></i></a>
                 </div>
             </div>
         </header>
-        <button class="mail__btn click" onclick="toggleModal()"><i class="fa-solid fa-envelope"></i></button>
+        <a href="#">
+            <button class="mail__btn click" onclick="toggleModal()"><i class="fa-solid fa-envelope"></i></button>
+        </a>
         <a href="#projects" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
         <div class="modal">
             <div class="modal__half modal__about">
-                <h3 class="modal__title">En voici plus sur moi.</h3>
-                <h4 class="modal__sub-title modal__sub-title--about">Développeur Frontend.</h4>
+                <h3 class="modal__title">Here's a bit about me.</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Developer.</h4>
                 <p class="modal__para">
-                    Je suis un<b class="green"> développeur frontend</b> de 20 ans.
+                    I'm a 20 year old french<b class="green"> frontend dev.</b>
                     <br>
-                    Je suis en apprentissage de développement Frontend, j'aimerais poursuivre cette formation avec un
-                    emploi dans la <b class="green">programmation Frontend</b> afin de me perfectionner dans ce domaine.
+                    I'm a learning frontend dev and i would like to continue this <b class="green">training</b> with a
+                    job in frontend programming in order to <b class="green">improve</b> even more in this field.
+
                 </p>
                 <div class="modal__languages">
                     <figure class="modal__language">
                         <img class="modal__language--img"
                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
                             alt="">
-                        <span class="language__name">HTML</span>
+                        <span class="language__name">HTML5</span>
                     </figure>
                     <figure class="modal__language">
                         <img class="modal__language--img"
                             src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
-                        <span class="language__name">CSS</span>
+                        <span class="language__name">CSS3</span>
                     </figure>
                     <figure class="modal__language">
                         <img class="modal__language--img"
@@ -92,15 +94,21 @@
                     </figure>
                     <figure class="modal__language">
                         <img class="modal__language--img"
+                            src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg"
+                            alt="">
+                        <span class="language__name">VS Code</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img"
                             src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="">
                         <span class="language__name">C++</span>
                     </figure>
                 </div>
             </div>
             <div class="modal__half modal__contact">
-                <i class="fa-solid fa-xmark modal__exit click"></i>
-                <h3 class="modal__title modal__title--contact">Contactez-moi !</h3>
-                <h4 class="modal__sub-title modal__sub-title--contact">Je suis ouvert à toute proposition.</h4>
+                <i class="fa-solid fa-xmark modal__exit click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">Let's have a chat</h3>
+                <h4 class="modal__sub-title modal__sub-title--contact">I would love to hear from you</h4>
                 <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
                         <label class="form__item--label">Name</label>
@@ -114,7 +122,7 @@
                         <label class="form__item--label">Message</label>
                         <textarea class="input" name="message" type="text" required></textarea>
                     </div>
-                    <button id="contact__submit" class="form__submit">Envoyer</button>
+                    <button id="contact__submit" class="form__submit">Send it my way</button>
                 </form>
                 <div class="modal__overlay modal__overlay--loading"><i class="fa-solid fa-spinner"></i>
                 </div>
@@ -123,12 +131,21 @@
                 </div>
             </div>
         </div>
+        <img src="./assets/semi circle.svg" class="shape shape--0">
+        <img src="./assets/circle.svg" class="shape shape--1">
+        <img src="./assets/squiggly.svg" class="shape shape--2">
+        <img src="./assets/circle.svg" class="shape shape--3">
+        <img src="./assets/triangle.svg" class="shape shape--4">
+        <img src="./assets/circle.svg" class="shape shape--5">
+        <img src="./assets/squiggly.svg" class="shape shape--6">
+        <img src="./assets/circle.svg" class="shape shape--7">
+        <img src="./assets/semi circle.svg" class="shape shape--8">
     </section>
     <section id="projects">
         <div class="container">
             <div class="row">
                 <h1 class="section__title">
-                    Voici quelques-uns de mes <span class="green">projets</span>
+                    Here's some of my <span class="green">projects</span>
                 </h1>
                 <ul class="project__list">
                     <li class="project">
@@ -140,14 +157,17 @@
                                 <h4 class="project__description--sub-title">
                                     Html, CSS, JavaScript
                                 </h4>
-                                <p class="project__description--para">Site Web de vente de livre en ligne, facile
-                                    d'utilisation avec un design simple et épuré. </p>
+                                <p class="project__description--para">A responsive, professional landing page template
+                                    of an online library I built with best practice HTML, CSS and JavaScript. In the
+                                    process of building the website, I was able to apply important CSS concepts
+                                    including flexbox, animations and transitions, the box model, media queries and BEM
+                                    CSS.</p>
                                 <div class="project__description--links">
                                     <a href="https://github.com/LE0Durand/FrontEnd-BestLibrary"
-                                        class="project__description--link" target="blank"><i
+                                        class="project__description--link" target="_blank"><i
                                             class="fa-brands fa-github"></i></a>
                                     <a href="https://le0durand.github.io/FrontEnd-BestLibrary/"
-                                        class="project__description--link" target="blank"><i
+                                        class="project__description--link" target="_blank"><i
                                             class="fa-solid fa-link"></i></a>
                                 </div>
                             </div>
@@ -158,18 +178,20 @@
                             <img src="./assets/eportfolio.png" class="project__img" alt="">
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
-                                <h3 class="project__description--title">Premier e-portfolio</h3>
+                                <h3 class="project__description--title">Basic ePortfolio</h3>
                                 <h4 class="project__description--sub-title">
                                     Html, CSS
                                 </h4>
-                                <p class="project__description--para">Première version de mon portfolio sous la forme
-                                    d'un site web </p>
+                                <p class="project__description--para">A simple, clean and responsive ePortfolio built
+                                    with HTML5 and CSS3 best practices (BEM, animations and transitions, reusable
+                                    classes and much more). The website allows individuals to connect with prospective
+                                    employers, as well as showcase their skills and projects.</p>
                                 <div class="project__description--links">
                                     <a href="https://github.com/LE0Durand/FrontEnd-PersonalWebsite"
-                                        class="project__description--link" target="blank"><i
+                                        class="project__description--link" target="_blank"><i
                                             class="fa-brands fa-github"></i></a>
                                     <a href="https://le0durand.github.io/FrontEnd-PersonalWebsite/"
-                                        class="project__description--link" target="blank"><i
+                                        class="project__description--link" target="_blank"><i
                                             class="fa-solid fa-link"></i></a>
                                 </div>
                             </div>
@@ -186,9 +208,14 @@
                     <img class="footer__logo--img" src="./assets/logo.png" alt="">
                 </figure>
                 <div class="footer__social--list">
-                    <a href="" class="footer__social--link link__hover-effect link__hover-effect--white">Github</a>
-                    <a href="" class="footer__social--link link__hover-effect link__hover-effect--white">Contact</a>
-                    <a href="" class="footer__social--link link__hover-effect link__hover-effect--white">Resume</a>
+                    <a href="https://github.com/LE0Durand"
+                        class="footer__social--link link__hover-effect link__hover-effect--white"
+                        target="_blank">Github</a>
+                    <a href="#" onclick="toggleModal()"
+                        class="footer__social--link link__hover-effect link__hover-effect--white">Contact</a>
+                    <a href="./assets/DURAND_Léo-CV_FR_2022V2.pdf"
+                        class="footer__social--link link__hover-effect link__hover-effect--white"
+                        target="_blank">Resume</a>
                 </div>
                 <div class="footer__copyright">Copyright &copy; 2022 Made by Léo Durand</div>
             </div>
